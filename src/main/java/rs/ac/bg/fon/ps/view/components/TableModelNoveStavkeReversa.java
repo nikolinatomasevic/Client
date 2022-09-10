@@ -11,18 +11,35 @@ import rs.ac.bg.fon.ps.domain.StavkaReversa;
 import javax.swing.table.AbstractTableModel;
 
 /**
- *
+ * Predstavlja model tabele novih stavki reversa.
+ * 
  * @author ACER
  */
 public class TableModelNoveStavkeReversa extends AbstractTableModel {
 
+	/**
+	 * Revers kome se dodaju stavke
+	 */
 	private final Revers revers;
+	/**
+	 * Niz naziva kolona tabele
+	 */
 	private final String[] naziviKolona = new String[] { "RB", "Zaduzena kolicina", "Masina ili Alat" };
 
+	/**
+	 * Postavlja revers na unetu vrednost.
+	 * 
+	 * @param revers novi revers
+	 */
 	public TableModelNoveStavkeReversa(Revers revers) {
 		this.revers = revers;
 	}
 
+	/**
+	 * Vraca broj redova tabele.
+	 * 
+	 * @return broj redova tabele kao ceo broj
+	 */
 	@Override
 	public int getRowCount() {
 		if (revers != null && revers.getStavke() != null) {
@@ -32,16 +49,34 @@ public class TableModelNoveStavkeReversa extends AbstractTableModel {
 		}
 	}
 
+	/**
+	 * Vraca broj kolona tabele.
+	 * 
+	 * @return broj kolona tabele kao ceo broj
+	 */
 	@Override
 	public int getColumnCount() {
 		return naziviKolona.length;
 	}
 
+	/**
+	 * Za uneti redni broj kolone vraca njen naziv.
+	 * 
+	 * @param column redni broj kolone
+	 * @return naziv kolone kao String
+	 */
 	@Override
 	public String getColumnName(int column) {
 		return naziviKolona[column];
 	}
 
+	/**
+	 * Za uneti redni broj reda i kolone vraca vrednost koja se nalazi u toj celiji tabele.
+	 * 
+	 * @param rowIndex redni broj reda
+	 * @param columnIndex redni broj kolone
+	 * @return vrednost koja se nalazi u datom redu i koloni kao objekat
+	 */
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
 		StavkaReversa stavka = revers.getStavke().get(rowIndex);
@@ -57,6 +92,17 @@ public class TableModelNoveStavkeReversa extends AbstractTableModel {
 		}
 	}
 
+	/**
+	 * Za uneti redni broj reda i kolone vraca da li se ta celija tabele moze menjati.
+	 * 
+	 * @param rowIndex redni broj reda
+	 * @param columnIndex redni broj kolone
+	 * @return
+	 * <ul>
+	 * <li>true - ako se ta celija moze menjati</li>
+	 * <li>false - ako to nije slucaj</li>
+	 * </ul>
+	 */
 	@Override
 	public boolean isCellEditable(int rowIndex, int columnIndex) {
 		if (columnIndex == 1 || columnIndex == 2) {
@@ -66,6 +112,14 @@ public class TableModelNoveStavkeReversa extends AbstractTableModel {
 		}
 	}
 
+	/**
+	 * Postavlja atribut stavke reversa na unetu vrednost.
+	 * Na osnovu rednog broja kolone se odredjuje koji atribut, a na osnovu rednog broja reda kojoj stavci reversa.
+	 * 
+	 * @param aValue vrednost koju pridruzujemo stavci reversa
+	 * @param rowIndex redni broj reda
+	 * @param columnIndex redni broj kolone
+	 */
 	@Override
 	public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
 		StavkaReversa stavka = revers.getStavke().get(rowIndex);
@@ -83,6 +137,9 @@ public class TableModelNoveStavkeReversa extends AbstractTableModel {
 		}
 	}
 
+	/**
+	 * Dodaje novu stavku reversa u tabelu i listu stavki.
+	 */
 	public void dodajNovuStavku() {
 		StavkaReversa novaStavka = new StavkaReversa();
 		novaStavka.setRb(revers.getStavke().size() + 1);
@@ -91,6 +148,11 @@ public class TableModelNoveStavkeReversa extends AbstractTableModel {
 		fireTableRowsInserted(revers.getStavke().size() - 1, revers.getStavke().size() - 1);
 	}
 
+	/**
+	 * Za uneti redni broj reda brise se stavka reversa iz tabele i liste stavki.
+	 * 
+	 * @param red redni broj reda
+	 */
 	public void ObrisiStavku(int red) {
 		revers.getStavke().remove(red);
 		int brojac = 1;
