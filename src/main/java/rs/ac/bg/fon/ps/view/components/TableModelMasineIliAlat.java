@@ -12,7 +12,7 @@ import javax.swing.table.AbstractTableModel;
 /**
  * Predstavlja model tabele masina i alata.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class TableModelMasineIliAlat extends AbstractTableModel {
 

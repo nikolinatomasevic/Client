@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmNovaMasinaIliAlat extends javax.swing.JDialog {
 

@@ -14,7 +14,7 @@ import javax.swing.table.AbstractTableModel;
 /**
  * Predstavlja model tabele reversa.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class TableModelReversi extends AbstractTableModel {
 

@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmPromeniRevers extends javax.swing.JDialog {
 

@@ -19,7 +19,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmRadnici extends javax.swing.JDialog {
 

@@ -13,7 +13,7 @@ import java.net.Socket;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class Communication {
 

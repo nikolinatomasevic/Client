@@ -24,7 +24,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmNoviRevers extends javax.swing.JDialog {
 

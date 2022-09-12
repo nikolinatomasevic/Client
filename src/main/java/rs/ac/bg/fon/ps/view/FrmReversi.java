@@ -18,7 +18,7 @@ import rs.ac.bg.fon.ps.view.components.TableModelReversi;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmReversi extends javax.swing.JDialog {
 

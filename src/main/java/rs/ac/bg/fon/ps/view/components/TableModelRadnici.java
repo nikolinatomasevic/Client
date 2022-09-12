@@ -12,7 +12,7 @@ import javax.swing.table.AbstractTableModel;
 /**
  * Predstavlja model tabele radnika.
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class TableModelRadnici extends AbstractTableModel {
 

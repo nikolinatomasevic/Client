@@ -14,7 +14,7 @@ import rs.ac.bg.fon.ps.view.components.TableModelMasineIliAlat;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmMasineIliAlat extends javax.swing.JDialog {
 

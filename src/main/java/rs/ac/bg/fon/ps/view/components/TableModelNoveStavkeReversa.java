@@ -13,7 +13,7 @@ import javax.swing.table.AbstractTableModel;
 /**
  * Predstavlja model tabele novih stavki reversa.
  * 
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class TableModelNoveStavkeReversa extends AbstractTableModel {
 

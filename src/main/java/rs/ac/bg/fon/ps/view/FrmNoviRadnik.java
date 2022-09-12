@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmNoviRadnik extends javax.swing.JDialog {
 

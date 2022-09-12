@@ -14,7 +14,7 @@ import rs.ac.bg.fon.ps.view.FrmLogin;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class Client {
 

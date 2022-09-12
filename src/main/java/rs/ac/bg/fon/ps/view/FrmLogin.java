@@ -14,7 +14,7 @@ import javax.swing.GroupLayout;
 
 /**
  *
- * @author ACER
+ * @author nikolinatomasevic
  */
 public class FrmLogin extends javax.swing.JFrame {
 
